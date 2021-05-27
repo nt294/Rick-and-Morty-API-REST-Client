@@ -27,9 +27,8 @@ def get_all_pages():
 		location_info = r.json()
 	return locs
 
-# Iterates through the list of locations and characters, printing just the locations.
-# Enumeration was used, starting from 1, in order to align with the API's ID numbers
-# for each location. 
+# Iterates through the list of locations and characters, printing just the locations
+# Enumerates from 1 in order to align with the API's ID numbers for each location
 def print_locations(location_char_list):
 	for i, pair in enumerate(location_char_list, 1):
 		print(i, pair[0], sep=": ")
@@ -49,7 +48,7 @@ def get_user_input(total_locations):
 			continue	
 		return requested_location
 
-# Function to print the characters from the requested location if it has characters.
+# Function to print the characters from the requested location if it has characters
 def print_characters(loc_id, location_char_list):
 	location_index = loc_id - 1 # The API's IDs are not zero indexed, so substract 1 to prevent incorrent selection
 	character_ids = []
