@@ -2,7 +2,7 @@ import unittest
 import unittest.mock
 import rickmorty
 
-class test_rickmorty(unittest.TestCase):
+class test_rickmorty():
 
     def test_1(self):
     	# Uses mock to emulate user input, i.e. the user pressing 1 and 2 when 
